@@ -1,0 +1,12 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':api')
+    // 用来生成META-INF/services/javax.annotation.processing.Processor文件
+    implementation 'com.google.auto.service:auto-service:1.0-rc7'
+    implementation 'com.squareup:javapoet:1.12.1'
+}
+
+sourceCompatibility = "8"
+targetCompatibility = "8"
